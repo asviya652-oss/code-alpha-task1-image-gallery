@@ -1,0 +1,79 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('animal')">Animals</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('place')">Places</button>
+</div>
+
+<div class="gallery">
+
+    <div class="card animal">
+        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800" onclick="openLightbox(this)">
+        <h3>Lion</h3>
+        <p>The lion is known as king of jungle.<br>Strong and fearless animal.</p>
+    </div>
+
+    <div class="card animal">
+        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800" onclick="openLightbox(this)">
+        <h3>Parrot</h3>
+        <p>Parrot is a colorful and intelligent bird.<br>it can mimic human speech and is known for its strong curved beak.</p>
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800" onclick="openLightbox(this)">
+        <h3>Sunset</h3>
+        <p>Sunset gives peaceful orange sky.<br>Nature looks magical.</p>
+    </div>
+
+    <div class="card place">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800" onclick="openLightbox(this)">
+        <h3>Taj Mahal</h3>
+        <p>Taj Mahal is symbol of love.<br>One of India's wonders.</p>
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" onclick="openLightbox(this)">
+        <h3>Swiss Alps</h3>
+        <p>Snow mountains with beautiful views.<br>Very scenic place.</p>
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800" onclick="openLightbox(this)">
+        <h3>Waterfall</h3>
+        <p>Flowing water gives relaxing feel.<br>Cool and refreshing.</p>
+    </div>
+
+    <div class="card place">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" onclick="openLightbox(this)">
+        <h3>Maldives</h3>
+        <p>Blue sea and white sand.<br>Perfect beach destination.</p>
+    </div>
+
+    <div class="card nature">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800" onclick="openLightbox(this)">
+        <h3>Forest Road</h3>
+        <p>Green trees all around.<br>Peaceful natural beauty.</p>
+    </div>
+
+</div>
+
+<div id="lightbox" class="lightbox">
+    <button onclick="prevImage()">Prev</button>
+    <img id="lightbox-img">
+    <button onclick="nextImage()">Next</button>
+    <span onclick="closeLightbox()">X</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
