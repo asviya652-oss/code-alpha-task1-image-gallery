@@ -23,32 +23,12 @@ h1{
     font-weight:bold;
 }
 
-/* ===== RESPONSIVE FIX (ADD HERE AT BOTTOM) ===== */
-
+/* ===== GALLERY BASE (UNCHANGED LOOK) ===== */
 .gallery {
-  display: grid;
-  gap: 16px;
-  padding: 16px;
-}
-
-/* PHONE */
-@media (max-width: 600px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* LAPTOP */
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
+    display:grid;
+    grid-template-columns:repeat(4,1fr); /* laptop default */
+    gap:16px;
+    padding:16px;
 }
 
 .card{
@@ -65,12 +45,21 @@ h1{
 
 .card img{
     width:100%;
-    height: 180px;;
+    height:180px;
     object-fit:cover;
     border-radius:10px;
     cursor:pointer;
 }
 
+/* ===== TEXT (SAFE READABLE) ===== */
+.card p{
+    margin-top:8px;
+    font-size:16px;
+    line-height:1.5;
+    text-align:center;
+}
+
+/* ===== LIGHTBOX (UNCHANGED) ===== */
 .lightbox{
     display:none;
     position:fixed;
@@ -94,41 +83,17 @@ h1{
     cursor:pointer;
 }
 
-@media(max-width:900px){
+/* ===== PHONE ONLY FIX (IMPORTANT) ===== */
+@media (max-width:600px){
     .gallery{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr); /* 📱 phone = 2 images */
     }
-}
-/* PHONE: 2 IMAGES PER ROW */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 12px;
-}
 
-/* IMAGE FULL WIDTH */
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .card img{
+        height:160px;
+    }
 
-/* TEXT MATCH IMAGE SIZE */
-.card p {
-  margin-top: 6px;
-  font-size: 15px;     /* readable on phone */
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* LAPTOP (already OK, still safe) */
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .card p {
-    font-size: 17px;
-  }
+    .card p{
+        font-size:15px;   /* 📱 readable text */
+    }
 }
