@@ -100,3 +100,33 @@ h1{
     font-size:30px;
     cursor:pointer;
 }
+/* ===== MOBILE ONLY FIX (DO NOT TOUCH DESKTOP) ===== */
+@media (max-width: 600px) {
+
+  /* 2 images per row */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  /* equal image size (parrot issue fix) */
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  /* readable text */
+  .card h3 {
+    font-size: 16px;
+    margin: 6px 0 4px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+}
