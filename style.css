@@ -99,3 +99,36 @@ h1{
         grid-template-columns:repeat(2,1fr);
     }
 }
+/* PHONE: 2 IMAGES PER ROW */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px;
+}
+
+/* IMAGE FULL WIDTH */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TEXT MATCH IMAGE SIZE */
+.card p {
+  margin-top: 6px;
+  font-size: 15px;     /* readable on phone */
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* LAPTOP (already OK, still safe) */
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card p {
+    font-size: 17px;
+  }
+}
